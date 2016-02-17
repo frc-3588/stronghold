@@ -43,7 +43,7 @@ public class DefenseDown extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	RobotMap.defenseArm.set(-.5);
+    	RobotMap.defenseArm.set(-.1);
     }
 
     // Make this return true when this Command no longer needs to run execute()

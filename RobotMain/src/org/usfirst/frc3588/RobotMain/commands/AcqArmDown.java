@@ -43,7 +43,7 @@ public class AcqArmDown extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	RobotMap.acqArmRotate.set(-.5);
+    	RobotMap.acqArmRotate.set(.75);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -53,10 +53,12 @@ public class AcqArmDown extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
+    	RobotMap.acqArmRotate.set(0);
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	end();
     }
 }
